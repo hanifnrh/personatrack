@@ -4,7 +4,7 @@ import { RiBrainFill } from "react-icons/ri";
 
 export default function Footer() {
     return (
-        <div id="contact" className="px-6 py-10 sm:px-0 flex flex-col items-center justify-center">
+        <div className="px-6 py-10 sm:px-0 flex flex-col items-center justify-center">
             <div className="w-full grid grid-cols-2 sm:grid-cols-2 gap-y-10 justify-between items-start">
                 <div className=" text-white body-light grid grid-cols-1 justify-items-start gap-y-4 gap-x-10">
                     <Link

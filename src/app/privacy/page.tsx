@@ -3,7 +3,7 @@
 
 const Privacy = () => {
     return (
-        <div className="px-8 sm:px-0 grid grid-cols-1 gap-4 py-20">
+        <div className="px-6 sm:px-0 grid grid-cols-1 gap-4 py-20">
             <h1 className="text-center text-white body-bold text-xl">Privacy Policy</h1>
             <p className="text-white body-light text-center text-sm">
                 Spotify was created as an open-source app that utilizes the Spotify/Last.fm/Apple Music Web API. By using this app, you consent to the use of your Spotify account username and data to display your top artists.
