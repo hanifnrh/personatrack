@@ -4,10 +4,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Personalify",
+  title: "Personatrack",
   description: "Describe your music personality",
   keywords: [
-    "personalify",
+    "Personatrack",
     "spotify",
     "receiptify",
     "personality",

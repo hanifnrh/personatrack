@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <div className="px-6 sm:px-0 grid grid-cols-1 gap-4 my-32 items-center justify-items-center">
-      <h1 className="text-3xl body-bold text-white">Personalify</h1>
+      <h1 className="text-3xl body-bold text-white">Personatrack</h1>
       <p className="bg-white bg-opacity-10 text-white body text-center rounded-xl p-4">
         Describe your personality based on your top artists and genres you&apos;re listening to on Spotify. Also would describe what animal and celebrity align with your personality.
       </p>

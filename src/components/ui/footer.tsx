@@ -46,7 +46,7 @@ export default function Footer() {
                     © 2024 Ziel - All Rights Reserved
                     <Link href="/" className="flex items-center gap-2 text-white" prefetch={false}>
                         <RiBrainFill size={30} />
-                        <span className="text-xl body-bold">Personalify</span>
+                        <span className="text-xl body-bold">Personatrack</span>
                     </Link>
                 </div>
             </div>
