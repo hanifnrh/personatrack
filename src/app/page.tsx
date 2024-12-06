@@ -25,7 +25,7 @@ export default function Home() {
         <button
           className="bg-red-500 text-white px-4 py-3 rounded-full hover:bg-red-600 transition-all body inline-flex items-center justify-center"
         >
-          <a href="teer.id/dailyziel" className="inline-flex items-center justify-center  gap-2">
+          <a href="https://teer.id/dailyziel" className="inline-flex items-center justify-center  gap-2">
             <span className="text-xl">
               <FaHeart />
             </span>
