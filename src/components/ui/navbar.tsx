@@ -8,7 +8,7 @@ export default function ResponsiveNavbar() {
         <div className="flex items-center justify-between px-4 py-2 bg-transparent">
             <Link href="/" className="flex items-center gap-2 text-white" prefetch={false}>
                 <RiBrainFill size={30} />
-                <span className="text-lg body-bold">Personatrack</span>
+                <span className="text-lg body-bold">Sonatra</span>
             </Link>
             <Sheet>
                 <SheetTrigger asChild>

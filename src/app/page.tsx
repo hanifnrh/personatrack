@@ -1,17 +1,38 @@
 "use client";
+import { MoveRight } from "lucide-react";
+import Image from "next/image";
 import { FaHeart, FaSpotify } from "react-icons/fa";
-
 export default function Home() {
   const handleLogin = () => {
     window.location.href = '/api/login';
   };
 
   return (
-    <div className="px-6 sm:px-0 grid grid-cols-1 gap-4 my-32 items-center justify-items-center">
-      <h1 className="text-3xl body-bold text-white">Personatrack</h1>
-      <p className="bg-white bg-opacity-10 text-white body text-center rounded-xl p-4">
-        Describe your personality based on your top artists and genres you&apos;re listening to on Spotify. Also would describe what animal and celebrity align with your personality.
-      </p>
+    <div className="px-6 sm:px-0 grid grid-cols-1 gap-4 my-20 items-center justify-items-center">
+      <h1 className="text-3xl body-bold text-white text-center">Sonatra - Describe Your Music Persona</h1>
+      <div className="justify-center items-center bg-white bg-opacity-10 text-white body text-center rounded-xl p-4 flex flex-col gap-4">
+        <p>
+          Log in with Spotify to know your music persona!
+        </p>
+        <div className="text-sm body border-b border-green-500 text-green-500 inline-flex gap-2 w-fit">
+          Get Spotify here <MoveRight />
+        </div>
+        <div className="flex flex-col items-center justify-center gap-2">
+          <h1 className="body-light text-white text-sm">
+            This app is made with
+          </h1>
+          <div className="flex justify-center items-center gap-2 body-bold text-white text-md">
+            <Image
+              src="/spotify-logo.svg"
+              width={500}
+              height={500}
+              alt="Spotify Logo"
+              className="h-6 w-auto"
+            />
+            API
+          </div>
+        </div>
+      </div>
       <div className="flex flex-col gap-4">
         <button
           onClick={handleLogin}

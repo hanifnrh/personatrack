@@ -1,7 +1,8 @@
 "use client";
 
+import Head from "next/head";
+import Image from "next/image";
 import { useEffect, useState } from "react";
-
 const Dashboard = () => {
     const [artists, setArtists] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
@@ -89,34 +90,72 @@ const Dashboard = () => {
     };
 
     return (
-        <div className="px-6 sm:px-0 grid grid-cols-1 gap-4 py-10">
-            <h1 className="text-center text-white body-bold text-xl">Your Top Artists</h1>
-            <div className="">
-                {loading ? (
-                    <p className="text-center body-light text-white">Loading...</p>
-                ) : error ? (
-                    <p>{error}</p>
+        <>
+            <Head>
+                <title>Sonatra - Discover Your Music Personality</title>
+                <meta name="description" content="Analyze your top Spotify artists and discover your music personality with Sonatra." />
+                <meta name="keywords" content="Spotify, music personality, top artists, genres" />
+                <meta property="og:title" content="Sonatra - Discover Your Music Personality" />
+                <meta property="og:image" content="/spotify-logo.png" />
+                <meta property="og:url" content="https://yourwebsite.com" />
+                <meta property="og:description" content="Analyze your music taste with Sonatra and Spotify!" />
+                <meta name="theme-color" content="#1DB954" />
+            </Head>
+            <div className="px-6 sm:px-0 grid grid-cols-1 gap-4 py-10">
+                <div className="flex justify-center">
+                    <div className="flex flex-col items-center justify-center gap-2 bg-white bg-opacity-10 rounded-xl p-4 w-fit">
+                        <h1 className="body-light text-white text-xs">
+                            This app is made with
+                        </h1>
+                        <div className="flex justify-center items-center gap-2 body-bold text-white text-md">
+                            <Image
+                                src="/spotify-logo.svg"
+                                width={500}
+                                height={500}
+                                alt="Spotify Logo"
+                                className="h-6 w-auto"
+                            />
+                            API
+                        </div>
+                    </div>
+                </div>
+                <h1 className="text-center text-white body-bold text-xl">Your Top Artists</h1>
+                <div className="">
+                    {loading ? (
+                        <p className="text-center body-light text-white">Loading...</p>
+                    ) : error ? (
+                        <p>{error}</p>
+                    ) : (
+                        <ul className="grid grid-cols-2 gap-2">
+                            {artists.map((artist) => (
+                                <li key={artist.id} className="flex gap-2 bg-white bg-opacity-10 rounded-xl p-2">
+                                    <img src={artist.images[0]?.url} alt={artist.name} className="w-10 h-10 rounded-md" />
+                                    <div className="text-xs text-white">
+                                        <p className="body">{artist.name}</p>
+                                        {/* <p className="line-clamp-1 body-light">{artist.genres.join(', ')}</p> */}
+                                        <a
+                                            href={artist.external_urls.spotify}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-green-400 underline text-xs body"
+                                        >
+                                            Listen on Spotify
+                                        </a>
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+
+                    )}
+                </div>
+                <h2 className="text-center text-white body-bold text-xl mt-10">Your Personality Based on Your Top Artists:</h2>
+                {personality ? (
+                    <p className="text-white body-light text-justify text-sm">{personality}</p>
                 ) : (
-                    <ul className="grid grid-cols-2 gap-2">
-                        {artists.map((artist) => (
-                            <li key={artist.id} className="flex gap-2 bg-white bg-opacity-10 rounded-xl p-2">
-                                <img src={artist.images[0]?.url} alt={artist.name} className="w-10 h-10 rounded-md" />
-                                <div className="text-xs text-white">
-                                    <p className="body">{artist.name}</p>
-                                    <p className="line-clamp-1 body-light">{artist.genres.join(', ')}</p>
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
+                    <p className="text-center body-light text-white">Loading personality description...</p>
                 )}
             </div>
-            <h2 className="text-center text-white body-bold text-xl mt-10">Your Personality Based on Your Top Artists:</h2>
-            {personality ? (
-                <p className="text-white body-light text-justify text-sm">{personality}</p>
-            ) : (
-                <p className="text-center body-light text-white">Loading personality description...</p>
-            )}
-        </div>
+        </>
     );
 };
 

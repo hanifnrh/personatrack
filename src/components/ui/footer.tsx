@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { RiBrainFill } from "react-icons/ri";
 
@@ -42,11 +43,20 @@ export default function Footer() {
 
 
                 </div>
-                <div className={`h-full backdrop:body-light text-end sm:text-end flex flex-col justify-between items-end text-white`}>
+                <div className={`h-full body-light text-sm text-end sm:text-end flex flex-col justify-between items-end text-white`}>
                     © 2024 Ziel - All Rights Reserved
                     <Link href="/" className="flex items-center gap-2 text-white" prefetch={false}>
+                        <Image
+                            src="/spotify-logo.svg"
+                            width={500}
+                            height={500}
+                            alt="Spotify Logo"
+                            className="h-7 w-auto"
+                        />
+                    </Link>
+                    <Link href="/" className="flex items-center gap-2 text-white" prefetch={false}>
                         <RiBrainFill size={30} />
-                        <span className="text-xl body-bold">Personatrack</span>
+                        <span className="text-xl body-bold">Sonatra</span>
                     </Link>
                 </div>
             </div>

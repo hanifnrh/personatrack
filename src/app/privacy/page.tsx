@@ -8,9 +8,9 @@ const Privacy = () => {
             <p className="text-white body-light text-center text-sm">
                 Spotify was created as an open-source app that utilizes the Spotify/Last.fm/Apple Music Web API. By using this app, you consent to the use of your Spotify account username and data to display your top artists.
 
-                Personatrack does not store or collect any data, nor does it share your information with third parties. All data is used exclusively for generating your personality description.
+                Sonatra does not store or collect any data, nor does it share your information with third parties. All data is used exclusively for generating your personality description.
 
-                While you can be confident that your data is neither stored nor misused, you can revoke Personatrack access through the apps page and click &quot;REMOVE ACCESS&quot; for Personatrack.
+                While you can be confident that your data is neither stored nor misused, you can revoke Sonatra access through the apps page and click &quot;REMOVE ACCESS&quot; for Sonatra.
             </p>
 
             <h1 className="text-center text-white body-bold text-xl mt-10">How This App Works</h1>
