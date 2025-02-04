@@ -72,7 +72,7 @@ const Dashboard = () => {
                 messages: [
                     {
                         role: 'user',
-                        content: `Based on the following artists and genres: ${artistNames}, ${genres}, can you describe my personality? Describe in paragraph not in points, also define what animal am I (just one animal) and what celebrity am I (just one celebrity)`
+                        content: `Based on the following artists and genres: ${artistNames}, ${genres}, can you describe my personality? Describe in paragraph not in points, each prompt has to be unique, also define what animal am I (just one animal) and what celebrity am I (just one celebrity)`
                     }
                 ],
                 web_access: false
@@ -97,9 +97,8 @@ const Dashboard = () => {
                 <meta name="keywords" content="Spotify, music personality, top artists, genres" />
                 <meta property="og:title" content="Sonatra - Discover Your Music Personality" />
                 <meta property="og:image" content="/spotify-logo.png" />
-                <meta property="og:url" content="https://yourwebsite.com" />
+                <meta property="og:url" content="https://sonatra.vercel.app" />
                 <meta property="og:description" content="Analyze your music taste with Sonatra and Spotify!" />
-                <meta name="theme-color" content="#1DB954" />
             </Head>
             <div className="px-6 sm:px-0 grid grid-cols-1 gap-4 py-10">
                 <div className="flex justify-center">
